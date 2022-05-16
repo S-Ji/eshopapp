@@ -30,6 +30,9 @@ const routes: Routes = [
         EffectsModule.forFeature([UsersEffects])
     ],
     declarations: [LoginComponent],
+    exports: [
+        LoginComponent
+      ],
     providers: [UsersFacade]
 })
 export class UsersModule {}
