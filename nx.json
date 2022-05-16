@@ -1,57 +1,67 @@
 {
-    "npmScope": "eshopapp",
-    "affected": {
-        "defaultBase": "master"
+  "npmScope": "eshopapp",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
     },
-    "implicitDependencies": {
-        "package.json": {
-            "dependencies": "*",
-            "devDependencies": "*"
-        },
-        ".eslintrc.json": "*"
-    },
-    "tasksRunnerOptions": {
-        "default": {
-            "runner": "@nrwl/workspace/tasks-runners/default",
-            "options": {
-                "cacheableOperations": ["build", "lint", "test", "e2e"]
-            }
-        }
-    },
-    "targetDependencies": {
-        "build": [
-            {
-                "target": "build",
-                "projects": "dependencies"
-            }
-        ]
-    },
-    "projects": {
-        "admin": {
-            "tags": []
-        },
-        "admin-e2e": {
-            "tags": [],
-            "implicitDependencies": ["admin"]
-        },
-        "eshop": {
-            "tags": []
-        },
-        "eshop-e2e": {
-            "tags": [],
-            "implicitDependencies": ["eshop"]
-        },
-        "orders": {
-            "tags": []
-        },
-        "products": {
-            "tags": []
-        },
-        "ui": {
-            "tags": []
-        },
-        "users": {
-            "tags": []
-        }
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "N2NhMjc4MTItYTE1Yy00MDc2LTgwYjYtYjNhNjRmZTY3MDVifHJlYWQtd3JpdGU="
+      }
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "admin": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "admin"
+      ]
+    },
+    "eshop": {
+      "tags": []
+    },
+    "eshop-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "eshop"
+      ]
+    },
+    "orders": {
+      "tags": []
+    },
+    "products": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "users": {
+      "tags": []
+    }
+  }
 }
