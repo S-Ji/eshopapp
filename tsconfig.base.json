@@ -5,7 +5,7 @@
         "strictNullChecks": false,
         "noImplicitAny": false,
         "strictPropertyInitialization": false,
-        "rootDir": "../",
+        "rootDir": ".",
         "sourceMap": true,
         "declaration": false,
         "moduleResolution": "node",
@@ -26,5 +26,5 @@
             "@eshopapp/users": ["libs/users/src/index.ts"]
         }
     },
-    "exclude": ["node_modules", "tmp","environments"]
+    "exclude": ["node_modules", "tmp"]
 }
