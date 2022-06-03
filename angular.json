@@ -337,6 +337,8 @@
                 }
             }
         }
+        
+       
     },
     "cli": {
         "defaultCollection": "@nrwl/angular"

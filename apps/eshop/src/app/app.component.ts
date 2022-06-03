@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { UsersService } from '@eshopapp/users';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'eshopapp-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  constructor(
-    private usersService: UsersService
-  ) {}
+  // constructor(
+  //   private usersService: UsersService
+  // ) {}
 
-  ngOnInit(): void {
-      this.usersService.initAppSession();
-  }
+  // ngOnInit(): void {
+  //     this.usersService.initAppSession();
+  // }
 
   title = 'eshop';
 }
